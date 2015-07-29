@@ -27,7 +27,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         if let theWebView = webView{
             
-            let url = NSURL(string: "file:///www/index.html")
+            let url = NSBundle.mainBundle().URLForResource("index", withExtension:"html") 
             let dirUrl = NSURL(string: "file:///www/")
             theWebView.loadFileURL(url!, allowingReadAccessToURL: dirUrl!)
 
